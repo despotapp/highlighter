@@ -34,12 +34,12 @@ function initializeContextMenus() {
 
         chrome.contextMenus.create({ title: 'Highlight', id: 'highlight', contexts: ['selection'] });
         chrome.contextMenus.create({ title: 'Toggle Cursor', id: 'toggle-cursor' });
-        chrome.contextMenus.create({ title: 'Highlighter color', id: 'highlight-colors' });
-        chrome.contextMenus.create({ title: 'Yellow', id: 'yellow', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: 'Blue', id: 'blue', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: 'Green', id: 'green', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: 'Pink', id: 'pink', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: "Dark", id: "dark", parentId: "highlight-colors", type: "radio" });
+        chrome.contextMenus.create({ title: 'Highlighter color', id: 'highlight-color' });
+        chrome.contextMenus.create({ title: 'Yellow', id: 'yellow', parentId: 'highlight-color', type: 'radio' });
+        chrome.contextMenus.create({ title: 'Blue', id: 'blue', parentId: 'highlight-color', type: 'radio' });
+        chrome.contextMenus.create({ title: 'Green', id: 'green', parentId: 'highlight-color', type: 'radio' });
+        chrome.contextMenus.create({ title: 'Pink', id: 'pink', parentId: 'highlight-color', type: 'radio' });
+        chrome.contextMenus.create({ title: "Dark", id: "dark", parentId: "highlight-color", type: "radio" });
 
         // Get the initial selected color value
         const { title: colorTitle } = await getCurrentColor();
